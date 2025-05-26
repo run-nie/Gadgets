@@ -1,0 +1,21 @@
+你的项目文件夹\
+├── main.cpp         ← 你的 C++ 代码
+├── icon.ico         ← 图标文件（必须是 .ico 格式）
+├── myicon.rc        ← 资源描述文件（脚本会自动创建）
+├── build.bat        ← 编译脚本（你马上就会得到）
+
+✅ 使用说明
+把上面内容保存为 build.bat
+
+把 main.cpp 和 icon.ico 放在同一个文件夹下
+
+双击 build.bat，它会自动生成带图标的 main.exe 并运行
+
+ 注意事项
+你需要已安装 MinGW 并且 g++ 和 windres 都配置在了环境变量中
+
+图标文件必须是 .ico 格式，不能是 .png 或 .jpg
+
+如果控制台输出中文乱码，可以在 main.cpp 里加上：
+#include <windows.h>
+SetConsoleOutputCP(65001); // 设置控制台为 UTF-8
